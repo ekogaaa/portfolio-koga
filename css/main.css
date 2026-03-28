@@ -175,6 +175,15 @@ p:last-child {
   margin-bottom: 0;
 }
 
+.page-artwork .artwork-section__description {
+  margin: 1.25rem auto 0;
+  max-width: 44rem;
+  text-align: left;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  opacity: 0.96;
+}
+
 .page-artwork .artwork-video {
   margin: 0.5rem auto 1.25rem;
   max-width: 90%;
