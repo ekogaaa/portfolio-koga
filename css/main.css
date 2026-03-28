@@ -375,36 +375,6 @@ p:last-child {
   text-align: center;
 }
 
-.page-coding .coding-showcase {
-  margin: 0.5rem auto 2rem;
-  max-width: min(100%, 42rem);
-}
-
-.page-coding .coding-showcase img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 10px 32px rgba(20, 12, 32, 0.35);
-}
-
-.page-coding .coding-showcase figcaption {
-  margin-top: 0.9rem;
-  font-size: 0.95rem;
-}
-
-.page-coding .coding-showcase a {
-  color: #f5f3f7;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-  opacity: 0.95;
-}
-
-.page-coding .coding-showcase a:hover,
-.page-coding .coding-showcase a:focus-visible {
-  opacity: 1;
-}
-
 .page-coding .coding-section__description {
   margin: 1.25rem auto 2rem;
   max-width: 44rem;
@@ -414,8 +384,21 @@ p:last-child {
   opacity: 0.96;
 }
 
-.page-coding .coding-showcase--stacked {
-  margin-top: 0.5rem;
+.page-coding .coding-pen-link {
+  margin: 0.5rem auto 0.85rem;
+  font-size: 0.95rem;
+}
+
+.page-coding .coding-pen-link a {
+  color: #f5f3f7;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  opacity: 0.95;
+}
+
+.page-coding .coding-pen-link a:hover,
+.page-coding .coding-pen-link a:focus-visible {
+  opacity: 1;
 }
 
 .page-coding .coding-embed {
@@ -437,9 +420,10 @@ p:last-child {
 }
 
 .page-coding .coding-embed--p5 {
-  margin-top: 0.75rem;
-  height: min(75vh, 600px);
-  min-height: 420px;
+  max-width: min(100%, 58rem);
+  width: 100%;
+  height: min(92vh, 980px);
+  min-height: 640px;
 }
 
 .page-coding .coding-section__description--after-embed {
