@@ -157,6 +157,12 @@ p:last-child {
   opacity: 1;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .page-home .featured-carousel__slide {
+    transition-duration: 0.01ms;
+  }
+}
+
 .page-artwork main {
   text-align: center;
 }

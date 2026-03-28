@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const carousel = document.querySelector(".featured-carousel");
   if (carousel) {
     const slides = carousel.querySelectorAll(".featured-carousel__slide");
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (slides.length >= 2 && !reduceMotion.matches) {
+    if (slides.length >= 2) {
       let index = 0;
       const intervalMs = 4500;
       window.setInterval(() => {
