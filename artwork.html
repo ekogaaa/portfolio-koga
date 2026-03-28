@@ -31,12 +31,45 @@
         </section>
         <section class="artwork-section">
             <h2>Album Cover</h2>
+            <div class="artwork-gallery" role="group" aria-label="Album cover">
+                <img src="photos/album_cover.png" alt="Album cover design with daisy photograph and glitch effects" width="1200" height="1200" loading="lazy" decoding="async">
+            </div>
         </section>
         <section class="artwork-section">
             <h2>Vector Art</h2>
+            <div class="artwork-gallery" role="group" aria-label="Vector art gallery">
+                <img src="photos/vector_art.png" alt="Vector illustration, chibi character" width="1200" height="900" loading="lazy" decoding="async">
+                <img src="photos/vector_art_2.png" alt="Vector illustration, alternate piece" width="1200" height="900" loading="lazy" decoding="async">
+            </div>
         </section>
         <section class="artwork-section">
             <h2>Digital Animation</h2>
+            <div class="artwork-video">
+                <iframe src="https://www.youtube.com/embed/lrahsPfMJ4E" title="Digital animation — YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+            <div class="artwork-gallery" role="group" aria-label="Animation screenshot">
+                <img src="photos/digital_animation_screenshot.png" alt="Visual novel scene with characters and dialogue" width="1200" height="675" loading="lazy" decoding="async">
+            </div>
+            <div class="sprite-carousel" role="region" aria-roledescription="carousel" aria-label="Character sprites">
+                <div class="sprite-carousel__viewport">
+                    <img src="photos/sprite_1.png" alt="Character sprite sheet 1 of 5" class="sprite-carousel__slide is-active" width="1200" height="800" loading="eager" decoding="async" aria-hidden="false">
+                    <img src="photos/sprite_2.png" alt="Character sprite sheet 2 of 5" class="sprite-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
+                    <img src="photos/sprite_3.png" alt="Character sprite sheet 3 of 5" class="sprite-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
+                    <img src="photos/sprite_4.png" alt="Character sprite sheet 4 of 5" class="sprite-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
+                    <img src="photos/sprite_5.png" alt="Character sprite sheet 5 of 5" class="sprite-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="sprite-carousel__controls">
+                    <button type="button" class="sprite-carousel__btn sprite-carousel__btn--prev">Previous</button>
+                    <p class="sprite-carousel__status" aria-live="polite">1 / 5</p>
+                    <button type="button" class="sprite-carousel__btn sprite-carousel__btn--next">Next</button>
+                </div>
+            </div>
+        </section>
+        <section class="artwork-section">
+            <h2>Concept Artwork and Illustration</h2>
+        </section>
+        <section class="artwork-section">
+            <h2>Coding Concept Artwork</h2>
         </section>
     </main>
     <script src="js/main.js" defer></script>
