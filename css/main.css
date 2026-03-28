@@ -233,8 +233,13 @@ p:last-child {
   box-shadow: 0 10px 32px rgba(20, 12, 32, 0.35);
 }
 
-.page-artwork .artwork-carousel--glitch .artwork-carousel__viewport {
+.page-artwork .artwork-carousel--glitch .artwork-carousel__viewport,
+.page-artwork .artwork-carousel--concept .artwork-carousel__viewport {
   aspect-ratio: 4 / 3;
+}
+
+.page-artwork .artwork-carousel--coding .artwork-carousel__viewport {
+  aspect-ratio: 3 / 4;
 }
 
 .page-artwork .artwork-carousel__slide {
@@ -280,9 +285,11 @@ p:last-child {
 .page-artwork .artwork-carousel__btn {
   cursor: pointer;
   font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0.45rem 1rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.5rem 0.85rem;
+  min-width: 2.75rem;
   color: #f5f3f7;
   background: rgba(20, 16, 28, 0.45);
   border: 1px solid rgba(245, 243, 247, 0.35);
