@@ -10,7 +10,7 @@
     <link href="https://api.fontshare.com/v2/css?f[]=ranade@400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="page-artwork">
     <header class="site-header">
         <h1>Erin Koga's Portfolio</h1>
         <nav class="site-nav" aria-label="Main">
@@ -21,10 +21,23 @@
         </nav>
     </header>
     <main>
-        <h2>Glitch Art</h2>
-        <h2>Album Cover</h2>
-        <h2>Vector Art</h2>
-        <h2>Digital Animation </h2>
+        <section class="artwork-section">
+            <h2>Glitch Art</h2>
+            <div class="artwork-gallery" role="group" aria-label="Glitch art gallery">
+                <img src="photos/glitch_image.png" alt="Glitch art: red poppies with horizontal digital distortion" width="1200" height="800" loading="lazy" decoding="async">
+                <img src="photos/glitch_image_2.png" alt="Glitch art: forget-me-not flowers with fragmented color bands" width="1200" height="800" loading="lazy" decoding="async">
+                <img src="photos/glitch_image_3.png" alt="Glitch art: garden flowers with compression artifacts and color fringing" width="1200" height="800" loading="lazy" decoding="async">
+            </div>
+        </section>
+        <section class="artwork-section">
+            <h2>Album Cover</h2>
+        </section>
+        <section class="artwork-section">
+            <h2>Vector Art</h2>
+        </section>
+        <section class="artwork-section">
+            <h2>Digital Animation</h2>
+        </section>
     </main>
     <script src="js/main.js" defer></script>
 </body>
