@@ -23,10 +23,17 @@
     <main>
         <section class="artwork-section">
             <h2>Glitch Art</h2>
-            <div class="artwork-gallery" role="group" aria-label="Glitch art gallery">
-                <img src="photos/glitch_image.png" alt="Glitch art: red poppies with horizontal digital distortion" width="1200" height="800" loading="lazy" decoding="async">
-                <img src="photos/glitch_image_2.png" alt="Glitch art: forget-me-not flowers with fragmented color bands" width="1200" height="800" loading="lazy" decoding="async">
-                <img src="photos/glitch_image_3.png" alt="Glitch art: garden flowers with compression artifacts and color fringing" width="1200" height="800" loading="lazy" decoding="async">
+            <div class="artwork-carousel artwork-carousel--glitch" role="region" aria-roledescription="carousel" aria-label="Glitch art gallery">
+                <div class="artwork-carousel__viewport">
+                    <img src="photos/glitch_image.png" alt="Glitch art: red poppies with horizontal digital distortion" class="artwork-carousel__slide is-active" width="1200" height="800" loading="eager" decoding="async" aria-hidden="false">
+                    <img src="photos/glitch_image_2.png" alt="Glitch art: forget-me-not flowers with fragmented color bands" class="artwork-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
+                    <img src="photos/glitch_image_3.png" alt="Glitch art: garden flowers with compression artifacts and color fringing" class="artwork-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
+                </div>
+                <div class="artwork-carousel__controls">
+                    <button type="button" class="artwork-carousel__btn artwork-carousel__btn--prev">Previous</button>
+                    <p class="artwork-carousel__status" aria-live="polite">1 / 3</p>
+                    <button type="button" class="artwork-carousel__btn artwork-carousel__btn--next">Next</button>
+                </div>
             </div>
         </section>
         <section class="artwork-section">
@@ -50,18 +57,18 @@
             <div class="artwork-gallery" role="group" aria-label="Animation screenshot">
                 <img src="photos/digital_animation_screenshot.png" alt="Visual novel scene with characters and dialogue" width="1200" height="675" loading="lazy" decoding="async">
             </div>
-            <div class="sprite-carousel" role="region" aria-roledescription="carousel" aria-label="Character sprites">
-                <div class="sprite-carousel__viewport">
-                    <img src="photos/sprite_1.png" alt="Character sprite sheet 1 of 5" class="sprite-carousel__slide is-active" width="1200" height="800" loading="eager" decoding="async" aria-hidden="false">
-                    <img src="photos/sprite_2.png" alt="Character sprite sheet 2 of 5" class="sprite-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
-                    <img src="photos/sprite_3.png" alt="Character sprite sheet 3 of 5" class="sprite-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
-                    <img src="photos/sprite_4.png" alt="Character sprite sheet 4 of 5" class="sprite-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
-                    <img src="photos/sprite_5.png" alt="Character sprite sheet 5 of 5" class="sprite-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
+            <div class="artwork-carousel" role="region" aria-roledescription="carousel" aria-label="Character sprites">
+                <div class="artwork-carousel__viewport">
+                    <img src="photos/sprite_1.png" alt="Character sprite sheet 1 of 5" class="artwork-carousel__slide is-active" width="1200" height="800" loading="eager" decoding="async" aria-hidden="false">
+                    <img src="photos/sprite_2.png" alt="Character sprite sheet 2 of 5" class="artwork-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
+                    <img src="photos/sprite_3.png" alt="Character sprite sheet 3 of 5" class="artwork-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
+                    <img src="photos/sprite_4.png" alt="Character sprite sheet 4 of 5" class="artwork-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
+                    <img src="photos/sprite_5.png" alt="Character sprite sheet 5 of 5" class="artwork-carousel__slide" width="1200" height="800" loading="lazy" decoding="async" aria-hidden="true">
                 </div>
-                <div class="sprite-carousel__controls">
-                    <button type="button" class="sprite-carousel__btn sprite-carousel__btn--prev">Previous</button>
-                    <p class="sprite-carousel__status" aria-live="polite">1 / 5</p>
-                    <button type="button" class="sprite-carousel__btn sprite-carousel__btn--next">Next</button>
+                <div class="artwork-carousel__controls">
+                    <button type="button" class="artwork-carousel__btn artwork-carousel__btn--prev">Previous</button>
+                    <p class="artwork-carousel__status" aria-live="polite">1 / 5</p>
+                    <button type="button" class="artwork-carousel__btn artwork-carousel__btn--next">Next</button>
                 </div>
             </div>
         </section>

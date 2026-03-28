@@ -197,7 +197,7 @@ p:last-child {
 }
 
 .page-artwork .artwork-gallery + .artwork-gallery,
-.page-artwork .artwork-gallery + .sprite-carousel {
+.page-artwork .artwork-gallery + .artwork-carousel {
   margin-top: 1.25rem;
 }
 
@@ -210,14 +210,14 @@ p:last-child {
   box-shadow: 0 10px 32px rgba(20, 12, 32, 0.35);
 }
 
-.page-artwork .sprite-carousel {
+.page-artwork .artwork-carousel {
   margin-left: auto;
   margin-right: auto;
   max-width: 90%;
   width: 100%;
 }
 
-.page-artwork .sprite-carousel__viewport {
+.page-artwork .artwork-carousel__viewport {
   position: relative;
   aspect-ratio: 16 / 10;
   width: 100%;
@@ -227,7 +227,11 @@ p:last-child {
   box-shadow: 0 10px 32px rgba(20, 12, 32, 0.35);
 }
 
-.page-artwork .sprite-carousel__slide {
+.page-artwork .artwork-carousel--glitch .artwork-carousel__viewport {
+  aspect-ratio: 4 / 3;
+}
+
+.page-artwork .artwork-carousel__slide {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -239,18 +243,18 @@ p:last-child {
   pointer-events: none;
 }
 
-.page-artwork .sprite-carousel__slide.is-active {
+.page-artwork .artwork-carousel__slide.is-active {
   opacity: 1;
   z-index: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-artwork .sprite-carousel__slide {
+  .page-artwork .artwork-carousel__slide {
     transition-duration: 0.01ms;
   }
 }
 
-.page-artwork .sprite-carousel__controls {
+.page-artwork .artwork-carousel__controls {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -259,7 +263,7 @@ p:last-child {
   margin-top: 0.85rem;
 }
 
-.page-artwork .sprite-carousel__status {
+.page-artwork .artwork-carousel__status {
   margin: 0;
   min-width: 3.5rem;
   font-variant-numeric: tabular-nums;
@@ -267,7 +271,7 @@ p:last-child {
   opacity: 0.95;
 }
 
-.page-artwork .sprite-carousel__btn {
+.page-artwork .artwork-carousel__btn {
   cursor: pointer;
   font-family: inherit;
   font-size: 0.9rem;
@@ -279,14 +283,14 @@ p:last-child {
   border-radius: 8px;
 }
 
-.page-artwork .sprite-carousel__btn:hover,
-.page-artwork .sprite-carousel__btn:focus-visible {
+.page-artwork .artwork-carousel__btn:hover,
+.page-artwork .artwork-carousel__btn:focus-visible {
   background: rgba(245, 243, 247, 0.12);
   border-color: rgba(245, 243, 247, 0.55);
   outline: none;
 }
 
-.page-artwork .sprite-carousel:focus-visible {
+.page-artwork .artwork-carousel:focus-visible {
   outline: 2px solid rgba(245, 243, 247, 0.65);
   outline-offset: 4px;
   border-radius: 12px;
