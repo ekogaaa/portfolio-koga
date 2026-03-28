@@ -90,6 +90,11 @@ main {
   padding: 1rem 1.25rem 6rem;
 }
 
+body.page-home main,
+body.page-artwork main {
+  max-width: 58rem;
+}
+
 h1,
 h2,
 h3,
@@ -122,7 +127,9 @@ p:last-child {
 }
 
 .page-home .featured-carousel {
-  margin: 0 0 2rem;
+  margin: 0 auto 2rem;
+  width: 100%;
+  max-width: 90%;
 }
 
 .page-home .featured-carousel__viewport {
@@ -164,7 +171,7 @@ p:last-child {
 
 .page-artwork .artwork-video {
   margin: 0.5rem auto 1.25rem;
-  max-width: min(100%, 36rem);
+  max-width: 90%;
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 10px;
@@ -196,7 +203,7 @@ p:last-child {
 
 .page-artwork .artwork-gallery img {
   display: block;
-  max-width: min(100%, 36rem);
+  max-width: 90%;
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -206,7 +213,7 @@ p:last-child {
 .page-artwork .sprite-carousel {
   margin-left: auto;
   margin-right: auto;
-  max-width: min(100%, 36rem);
+  max-width: 90%;
   width: 100%;
 }
 
