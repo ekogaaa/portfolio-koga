@@ -247,12 +247,15 @@ p:last-child {
   opacity: 0.96;
 }
 
+/* 16:9 responsive embed: padding-bottom avoids iframe default ~150px height when aspect-ratio + % height misbehaves */
 .page-artwork .artwork-video,
 .page-videos .video-embed {
+  position: relative;
   margin: 0.5rem auto 1.25rem;
   max-width: 90%;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 0;
+  padding-bottom: 56.25%;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 10px 32px rgba(20, 12, 32, 0.35);
@@ -261,6 +264,9 @@ p:last-child {
 
 .page-artwork .artwork-video iframe,
 .page-videos .video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   width: 100%;
   height: 100%;
