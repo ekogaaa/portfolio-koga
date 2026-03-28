@@ -30,6 +30,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 body {
+  position: relative;
   margin: 0;
   min-height: 100vh;
   font-family: "Ranade", system-ui, -apple-system, sans-serif;
@@ -38,6 +39,57 @@ body {
   color: #f5f3f7;
   background-color: #4a3f58;
   background-image: linear-gradient(165deg, #9a8fb0 0%, #5d5469 42%, #2e2638 100%);
+}
+
+.site-header,
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.site-fx {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.site-fx__rain {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.site-fx__ripples {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.site-fx__ripple {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  margin-top: -7px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(245, 243, 247, 0.4), 0 0 12px rgba(200, 190, 220, 0.2);
+  animation: site-fx-ripple 0.75s ease-out forwards;
+}
+
+@keyframes site-fx-ripple {
+  to {
+    transform: scale(7);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-fx__ripple {
+    animation: none;
+    opacity: 0;
+  }
 }
 
 body.page-home {
@@ -91,7 +143,8 @@ main {
 }
 
 body.page-home main,
-body.page-artwork main {
+body.page-artwork main,
+body.page-coding main {
   max-width: 58rem;
 }
 
@@ -316,4 +369,80 @@ p:last-child {
   outline: 2px solid rgba(245, 243, 247, 0.65);
   outline-offset: 4px;
   border-radius: 12px;
+}
+
+.page-coding main {
+  text-align: center;
+}
+
+.page-coding .coding-showcase {
+  margin: 0.5rem auto 2rem;
+  max-width: min(100%, 42rem);
+}
+
+.page-coding .coding-showcase img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 32px rgba(20, 12, 32, 0.35);
+}
+
+.page-coding .coding-showcase figcaption {
+  margin-top: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.page-coding .coding-showcase a {
+  color: #f5f3f7;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  opacity: 0.95;
+}
+
+.page-coding .coding-showcase a:hover,
+.page-coding .coding-showcase a:focus-visible {
+  opacity: 1;
+}
+
+.page-coding .coding-section__description {
+  margin: 1.25rem auto 2rem;
+  max-width: 44rem;
+  text-align: left;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  opacity: 0.96;
+}
+
+.page-coding .coding-showcase--stacked {
+  margin-top: 0.5rem;
+}
+
+.page-coding .coding-embed {
+  margin: 0 auto 1rem;
+  max-width: min(100%, 42rem);
+  height: min(68vh, 540px);
+  min-height: 380px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 32px rgba(20, 12, 32, 0.35);
+  background: rgba(20, 16, 28, 0.35);
+}
+
+.page-coding .coding-embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.page-coding .coding-embed--p5 {
+  margin-top: 0.75rem;
+  height: min(75vh, 600px);
+  min-height: 420px;
+}
+
+.page-coding .coding-section__description--after-embed {
+  margin-top: 1.35rem;
+  margin-bottom: 0;
 }
