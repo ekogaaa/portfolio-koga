@@ -66,8 +66,96 @@ function initSiteBackgroundFx() {
   });
 }
 
+function initWorkRevealCards() {
+  const cards = document.querySelectorAll(".work-reveal");
+  cards.forEach((card, index) => {
+    const trigger = card.querySelector(".work-reveal__media");
+    const description = card.querySelector(".work-reveal__description");
+    const toggleButton = card.querySelector("[data-work-reveal-toggle]");
+    if (!trigger || !description) return;
+
+    if (!description.id) {
+      description.id = `work-reveal-description-${index + 1}`;
+    }
+
+    trigger.setAttribute("role", "button");
+    trigger.setAttribute("tabindex", "0");
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.setAttribute("aria-controls", description.id);
+    trigger.setAttribute("aria-label", "Show or hide description");
+
+    const setOpenState = (isOpen) => {
+      card.classList.toggle("is-open", isOpen);
+      trigger.setAttribute("aria-expanded", String(isOpen));
+      if (toggleButton) {
+        toggleButton.setAttribute("aria-expanded", String(isOpen));
+        toggleButton.textContent = isOpen ? "Hide text" : "Pop out text";
+      }
+    };
+
+    const toggleCard = () => {
+      const isOpen = !card.classList.contains("is-open");
+      setOpenState(isOpen);
+    };
+
+    if (toggleButton) {
+      toggleButton.setAttribute("aria-controls", description.id);
+      toggleButton.setAttribute("aria-expanded", "false");
+      toggleButton.addEventListener("click", toggleCard);
+    }
+
+    trigger.addEventListener("click", (event) => {
+      const clickedControl = event.target.closest(
+        "a, button, input, textarea, select, label, iframe"
+      );
+      if (clickedControl) return;
+      const isOpen = card.classList.toggle("is-open");
+      setOpenState(isOpen);
+    });
+
+    trigger.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleCard();
+      }
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initSiteBackgroundFx();
+  initWorkRevealCards();
+
+  const randomWorkTrigger = document.querySelector("[data-random-work]");
+  if (randomWorkTrigger) {
+    const workTargets = [
+      "artwork.html#artwork-glitch-art",
+      "artwork.html#artwork-album-cover",
+      "artwork.html#artwork-vector-art",
+      "artwork.html#artwork-digital-animation",
+      "artwork.html#artwork-drawn-from-sketchbook",
+      "videos.html#video-single-channel-1",
+      "videos.html#video-single-channel-2",
+      "videos.html#video-single-channel-3",
+      "videos.html#video-abstract-video",
+      "videos.html#video-double-channel",
+      "coding.html#coding-creative-coding",
+      "coding.html#coding-art-74-portfolio",
+    ];
+
+    const goToRandomWork = () => {
+      const randomIndex = Math.floor(Math.random() * workTargets.length);
+      window.location.href = workTargets[randomIndex];
+    };
+
+    randomWorkTrigger.addEventListener("click", goToRandomWork);
+    randomWorkTrigger.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        goToRandomWork();
+      }
+    });
+  }
 
   const carousel = document.querySelector(".featured-carousel");
   if (carousel) {
