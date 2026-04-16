@@ -458,6 +458,11 @@ p:last-child {
   object-position: center;
 }
 
+.page-artwork #artwork-illustration-set .artwork-grid-thumb {
+  object-fit: cover;
+  object-position: center 35%;
+}
+
 .page-artwork .work-reveal__media > .artwork-gallery:first-child {
   aspect-ratio: 1 / 1;
   width: 100%;
