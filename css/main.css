@@ -61,6 +61,14 @@ body {
   background-attachment: fixed;
 }
 
+@media (pointer: fine) {
+  html,
+  body,
+  * {
+    cursor: url("../photos/icons8-cursor-24.png") 12 12, auto !important;
+  }
+}
+
 .site-header,
 main {
   position: relative;
