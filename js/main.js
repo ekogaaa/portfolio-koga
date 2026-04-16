@@ -118,8 +118,8 @@ function initSiteBackgroundFx() {
   let petals = [];
   const pointer = { x: -9999, y: -9999, active: false };
   const PETAL_COUNT = 42;
-  const PETAL_COLOR = "rgba(255, 175, 214, 0.78)";
-  const PETAL_STROKE = "rgba(255, 214, 235, 0.38)";
+  const PETAL_COLOR = "rgba(232, 212, 125, 0.78)";
+  const PETAL_STROKE = "rgba(232, 212, 125, 0.38)";
 
   function spawnPetal(fromTop = false) {
     const size = 5 + Math.random() * 8;
